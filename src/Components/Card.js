@@ -61,18 +61,20 @@ function Card({ field, id }) {
 	};
 
 	return (
-		<div className="p-2 flex flex-col h-48 items-center justify-around  bg-slate-700 shadow-lg shadow-slate-600 rounded">
-			<p className="font-bold text-3xl text-center block text-white">{field}</p>
+		<div className="p-2 flex flex-col h-80 items-center justify-around  bg-slate-700 shadow-lg shadow-slate-600 rounded">
+			<p className="font-bold text-4xl text-center block text-white">{field}</p>
 			<input
 				id={id}
 				type="text"
 				className="outline-0 bg-gradient-to-b from-transparent to-stone-300 to-stone-500 p-2 rounded w-3/4"
 			/>
 			{result === 1 ? (
-				<p className="text-green-500 text-center font-bold">Correcto!</p>
+				<p className="text-green-500 text-center font-bold text-3xl">
+					Correcto!
+				</p>
 			) : null}
 			{result === 2 ? (
-				<p className="text-red-600 text-center font-bold">Error!</p>
+				<p className="text-red-600 text-center font-bold text-3xl">Error!</p>
 			) : null}
 			<div
 				className="outline-0 w-3/4 px-4 py-2 bg-success hover:bg-success-dark font-bold text-center hover:cursor-pointer"

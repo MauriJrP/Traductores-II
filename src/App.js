@@ -3,11 +3,11 @@ import Card from './Components/Card';
 
 function App() {
 	return (
-		<div className="flex flex-col justify-center items-center mx-auto h-screen">
-			<h1 className="font-bold text-3xl bg-black w-3/6 text-center text-white p-3">
+		<div className="bg-slate-500 flex flex-col  items-center mx-auto h-screen">
+			<h1 className="font-bold text-4xl bg-black w-full text-center text-white p-8">
 				Expresiones regulares
 			</h1>
-			<div className="grid grid-cols-3 grid-rows-2 gap-4 w-3/6 shadow-lg shadow-stone-500 rounded-b-md bg-slate-500 p-4">
+			<div className="grid grid-cols-3 grid-rows-2 gap-5 w-full  bg-slate-500 p-5 ">
 				<Card field="Correo electronico" id="email" />
 				<Card field="Direccion IP" id="ipAddress" />
 				<Card field="Fecha" id="date" />
