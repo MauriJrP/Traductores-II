@@ -10,18 +10,18 @@ function Card({ field, id }) {
 		else if (id === 'phone') checkPhone();
 		else if (id === 'url') checkUrl();
 		else if (id === 'time') checkTime();
+		else console.log('Campo no valido');
 	};
 
 	const checkEmail = () => {
 		let input = document.getElementById(id).value;
-		const reg =
-			/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+		const reg = /^[A-Za-z][A-Za-z0-9\.]{5,29}@gmail.com$/;
 		setResultEvent(input, reg);
 	};
 	const checkIpAddress = () => {
 		let input = document.getElementById(id).value;
 		const reg =
-			/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+			/^((25[0-5]|2[0-4][0-9]|(0|1)[0-9][0-9]|[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|(0|1)[0-9][0-9]|[0-9]{1,2})$/;
 		setResultEvent(input, reg);
 	};
 	const checkDate = () => {
@@ -37,12 +37,12 @@ function Card({ field, id }) {
 	const checkUrl = () => {
 		let input = document.getElementById(id).value;
 		const reg =
-			/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+			/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
 		setResultEvent(input, reg);
 	};
 	const checkTime = () => {
 		let input = document.getElementById(id).value;
-		const reg = /([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?/g;
+		const reg = /([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?/;
 		setResultEvent(input, reg);
 	};
 

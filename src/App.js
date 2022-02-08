@@ -8,8 +8,8 @@ function App() {
 				Expresiones regulares
 			</h1>
 			<div className="grid grid-cols-3 grid-rows-2 gap-5 w-full  bg-slate-500 p-5 ">
-				<Card field="Correo electronico" id="email" />
-				<Card field="Direccion IP" id="ipAddress" />
+				<Card field="Correo de Gmail" id="email" />
+				<Card field="Direccion IPv4" id="ipAddress" />
 				<Card field="Fecha" id="date" />
 				<Card field="Telefono de Mexico" id="phone" />
 				<Card field="URL" id="url" />
